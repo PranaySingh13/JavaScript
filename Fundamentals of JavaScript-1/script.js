@@ -26,6 +26,3 @@ let job1="Programmer";
 let job2="Teacher";
 
 console.log(jonas_matilda,$function,person,PI,myFirstJob,myCurrentJob,job1,job2);
-
-//----3----
-//Data Types
