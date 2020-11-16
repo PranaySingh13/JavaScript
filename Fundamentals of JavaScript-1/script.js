@@ -90,3 +90,62 @@ console.log(ageJonas,ageSarah);
 
 console.log(ageJonas*2,ageSarah/10,2**3);
 //Here 2**3 means 2 to the power of 3 = 2*2*2
+
+const name1='Jonas';
+const name2='Schmedtmann';
+console.log(name1+' '+name2);//concatenation of string
+
+//Assignment Operators
+let x = 10 + 5;
+console.log(x);
+x+=10;//x=x+10=25 
+console.log(x);
+x*=10;//x=x*10=250
+console.log(x);
+x++;//x=x+1; preincrement
+console.log(x);//x=251
+x--;//x=x-1; predecrement
+console.log(x);//x=250
+
+//Comparison Operators
+console.log(ageJonas>ageSarah); // <,>,<=,>=
+console.log(ageSarah>=18);
+
+const isFullAge=ageSarah>=18;
+console.log(isFullAge);
+console.log(now-1991>now-2018);
+
+//----6----
+//Operator Precedence(Order of Operator Loading)
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+
+let a,b;
+a=b=25-10-5;//a=b=10,a=10
+console.log(a,b);
+
+const averageAge=(ageJonas+ageSarah)/2;
+console.log(ageJonas,ageSarah,averageAge);
+
+//----7----
+//Strings and Template Literals
+const name3='Jonas';
+const job3='teacher';
+const birthYear1=1991;
+const year1=2037;
+const jonas1="I'm " +name3+', a '+(year1-birthYear1)+' years old '+job3+' !';
+console.log(jonas1);
+
+console.log('String with \n\
+multiple \n\
+lines');
+
+//Template literals can assemble multiple pieces into one final string
+//``->Backticks to tell javascript that this is template string
+const jonasNew=`I'm ${name3}, a ${year1-birthYear1} years old ${job3} !`;
+console.log(jonasNew);
+
+console.log(`Just a regular String...`);
+
+console.log(`String 
+multiple
+lines`);
