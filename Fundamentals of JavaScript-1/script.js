@@ -149,3 +149,204 @@ console.log(`Just a regular String...`);
 console.log(`String 
 multiple
 lines`);
+
+//----8----
+//if-else statements
+const age1=15;
+if (age1>=18) {
+    console.log(`Sarah can Start driving license`);
+} else {
+    const yearLeft=18-age1;
+    console.log(`Sarah is too young. wait another ${yearLeft} years`);
+}
+
+const birthYear2=2012;
+let century;
+if (birthYear2<=2000) {
+    century=20;
+} else {
+    century=21;
+}
+console.log(century);
+
+//----9----
+//Type Conversion and Coercion
+//type conversion
+const inputYear='1991';
+console.log(inputYear+18);//199118
+console.log(Number(inputYear)+18);//2009
+console.log(Number(inputYear),inputYear);//1991,"1991"
+
+console.log(Number('Jonas'));//NaN
+console.log(typeof NaN);
+
+console.log(String(23),23);
+
+//type coercion(JavaScript converts one value into another value to execute)
+console.log('I am '+23+' years old');
+console.log('23'-'10'-3);//10
+console.log('23'+'10'+3);//23103 Only In Plus(+) operator all the number are converted into strings
+console.log('23'/'2');
+console.log('23'*'2');
+console.log('23'>'18');
+
+let n='1'+1;//'11'
+n=n-1;
+console.log(n);//10
+
+//----10----
+//Truthy and Falsy Values
+//Falsy Values: Values that will be converted into false when we attempt to convert them into a boolean. 
+//In Js, only 5 falsy values: 0,'',undefined,null,NaN
+
+//Truthy Values: Vice-versa of falsy values definition
+console.log(Boolean(0));//false
+console.log(Boolean(undefined));//false
+console.log(Boolean('Jonas'));//true
+console.log(Boolean({}));//true
+console.log(Boolean(''));//false
+
+const money=0;
+//here JS converted this number into boolean, i.e; false
+if (money) {
+    console.log("Don't Spend it all");
+} else {
+    console.log("You Should get a job!");//due to falsy value condition elxe statement is executed.
+}
+
+let height=1;
+//Here height is defined , i.e; true
+if (height) {
+    console.log('YAY! Height is defiened');
+} else {
+    console.log('Height is undefined');
+}
+
+//----11----
+//Equality Operators == vs ===
+//===(Strict Equality Operator), does not perform type coersion
+const age2=18;
+if (age2===18)//this operator in condition return boolean value
+console.log(` You just become an adult! :D(Strict)`);
+//==(Loose Equality Operator)(avoid in genral use)
+if (age2==18)
+console.log(` You just become an adult! :D(Losse)`);
+
+//prompt function will open prompt box and take input 
+const favourite=Number(prompt("What's your favourite number"));
+console.log(favourite);
+console.log(typeof favourite);
+
+if(favourite===23){//22===23->false
+    console.log('Cool! 23 is an amazing number');
+}else if(favourite===7){
+    console.log('7 is also a cool number');
+}else if(favourite===9){
+    console.log('9 is also a cool number');
+}else{
+    console.log('Number is not 23 or 7 or 9');
+}
+
+//Different(Not Equal) operator
+if(favourite !==23)
+console.log('Why not 23');
+
+//----12----
+//Logical Operators
+const hasDriverLicense=true; //A
+const hasGoodVision=true; //B
+//AND operator
+console.log(hasDriverLicense && hasGoodVision);
+//OR operator
+console.log(hasDriverLicense || hasGoodVision);
+//NOT operator
+console.log(!hasDriverLicense);
+
+if(hasDriverLicense && hasGoodVision){
+    console.log(`Sarah is able to  drive!`);
+}else{
+    console.log(`Someone else should drive...`);
+}
+
+const isTired=false; //condition
+console.log(hasDriverLicense && hasGoodVision && isTired);//false
+
+if(hasDriverLicense && hasGoodVision && isTired){
+    console.log(`Sarah is able to drive!`);
+}else{
+    console.log(`Someone else should drive...`);
+}
+
+//----13----
+//The Switch Statement
+const day='wednesday';
+
+switch(day){
+    case 'monday':
+        console.log(`Plan Course Structure`);
+        console.log(`Go to Coding Meet up`);
+        break;
+    case 'tuesday':
+        console.log(`prepare theory videos`);
+        break;
+    case 'wednesday':
+    case 'thrusday':
+        console.log(`write code examples`);
+        break;
+    case 'friday':
+        console.log(`record videos`);
+        break;
+    case 'saturday':    
+    case 'sunday':
+        console.log(`Enjoy weekend`);
+        break;
+    default:
+        console.log(`not a valid day`);                        
+}
+
+if(day==='monday'){
+    console.log(`plan course structure`);
+    console.log(`Go to coding meet up`);
+}else if(day==='tuesday'){
+    console.log(`prepare theory videos`);
+}else if(day==='wednesday' || day==='thrusday'){
+    console.log(`write code examples`);
+}else if(day==='friday'){
+    console.log(`record videos`);
+}else if(day==='saturday' || day==='sunday'){
+    console.log(`Enjoy Weekend`);
+}else{
+    console.log(`not a valid day`);
+}
+
+//----14----
+//Statements and Expressions
+//Expressions
+3+4
+1991
+true && false && !false
+//Statements
+if (23>10) {
+    console.log(`23 is bigger`);
+}
+
+const me='Jonas';
+console.log(`I'm ${2037-1991} years old ${me}`);
+
+//----15----
+//The Conditional(Ternary) Operator
+const age3=23;
+age3>=18 ? console.log(`I like to drink wine`) : console.log(`I like to drink water`);
+
+const drink=age3>=18 ?'wine':'water';
+console.log(drink);//wine
+
+let drink1;
+if (age3>=18) {
+    drink1='wine';
+}else{
+    drink1='water';
+}
+console.log(drink1);
+
+console.log(`I like to drink ${age3>=18?'wine':'water'}`);
